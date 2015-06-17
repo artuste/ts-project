@@ -1,3 +1,32 @@
+interface ICarOptions {
+    engine: Engine;
+    price: number;
+    color: string;
+    year?: number
+}
+
+interface IEngine {
+
+}
+
+class Engine {
+    constructor(public horsePower: number, 
+                public engineType: string) {
+    }
+}
+
+class Car {
+    engine: IEngine;
+    color: string;
+
+    constructor(data: ICarOptions) {
+        this.engine = data.engine;
+    }
+}
+
+
+///////////////////
+
 class Dashboard {
     content:string;
 
@@ -13,9 +42,3 @@ class Dashboard {
         this.content = value;
     }
 }
-
-var dashboard = new Dashboard();
-
-dashboard.set('Some text');
-
-console.log('content', dashboard.get());

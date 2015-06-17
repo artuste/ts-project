@@ -1,3 +1,17 @@
+var Engine = (function () {
+    function Engine(horsePower, engineType) {
+        this.horsePower = horsePower;
+        this.engineType = engineType;
+    }
+    return Engine;
+})();
+var Car = (function () {
+    function Car(data) {
+        this.engine = data.engine;
+    }
+    return Car;
+})();
+///////////////////
 var Dashboard = (function () {
     function Dashboard(content) {
         this.content = content;
@@ -10,7 +24,4 @@ var Dashboard = (function () {
     };
     return Dashboard;
 })();
-var dashboard = new Dashboard();
-dashboard.set('Some text');
-console.log('content', dashboard.get());
 //# sourceMappingURL=classes.js.map
